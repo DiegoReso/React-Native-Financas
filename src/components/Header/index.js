@@ -8,11 +8,11 @@ const statusBarHeight = StatusBar.currentHeight
   : 70
 
 
-export default function Header() {
+export default function Header({name}) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.username}>Diego Reis</Text>
+        <Text style={styles.username}>{name}</Text>
      
       <TouchableOpacity activeOpacity={0.5} style={styles.buttonUser}>
         <Feather name="user" size={27} color ='white'/>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.5)',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: '50%',
+    borderRadius: 44/2,
   },
   username:{
     fontSize: 18,
